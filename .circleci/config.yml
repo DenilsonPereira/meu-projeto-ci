@@ -2,16 +2,16 @@ version: 2.1
 
 jobs:
   test: 
-  docker:
-    - image: cimg/node:20.0
-  steps:
-    - checkout
-    - run:
-      name: Instalando dependências
-      command: npm install
-    - run:
-      name: Executando testes
-      command: npm test
+    docker:
+      - image: cimg/node:20.0
+    steps:
+      - checkout
+      - run:
+        name: Instalando dependências
+        command: npm install
+      - run:
+        name: Executando testes
+        command: npm test
 
 workflows:
   version: 2
